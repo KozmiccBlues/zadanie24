@@ -61,7 +61,7 @@ public class TransactionDao {
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setObject(1, type);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
+            if (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String description = resultSet.getString("description");
                 double amount = resultSet.getDouble("amount");
